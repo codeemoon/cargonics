@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@theme {
+  /* === Colors === */
+  --color-background: #f8f9ff;
+  --color-surface: #f8f9ff;
+  --color-surface-bright: #f8f9ff;
+  --color-surface-dim: #cbdbf5;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-surface-container: #e5eeff;
+  --color-surface-container-high: #dce9ff;
+  --color-surface-container-highest: #d3e4fe;
+  --color-surface-variant: #d3e4fe;
+  --color-surface-tint: #4e5c90;
+  --color-on-surface: #0b1c30;
+  --color-on-surface-variant: #45464f;
+  --color-inverse-surface: #213145;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-outline: #767680;
+  --color-outline-variant: #c6c5d0;
+
+  --color-primary: #000520;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #0a1b4d;
+  --color-on-primary-container: #7684bc;
+  --color-primary-fixed: #dce1ff;
+  --color-primary-fixed-dim: #b6c4ff;
+  --color-on-primary-fixed: #051749;
+  --color-on-primary-fixed-variant: #364477;
+  --color-inverse-primary: #b6c4ff;
+
+  --color-secondary: #a04100;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fe6b00;
+  --color-on-secondary-container: #572000;
+  --color-secondary-fixed: #ffdbcc;
+  --color-secondary-fixed-dim: #ffb693;
+  --color-on-secondary-fixed: #351000;
+  --color-on-secondary-fixed-variant: #7a3000;
+
+  --color-tertiary: #000802;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #00250e;
+  --color-on-tertiary-container: #009b50;
+  --color-tertiary-fixed: #6afe9c;
+  --color-tertiary-fixed-dim: #4ae183;
+  --color-on-tertiary-fixed: #00210c;
+  --color-on-tertiary-fixed-variant: #005228;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-navy-gradient-start: #0A1B4D;
+  --color-navy-gradient-end: #162E74;
+  --color-success-bg: #F0FDF4;
+
+  /* === Spacing === */
+  --spacing-base: 8px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 48px;
+  --spacing-container-max: 1280px;
+
+  /* === Typography === */
+  --font-display-lg: "Montserrat", sans-serif;
+  --font-headline-md: "Montserrat", sans-serif;
+  --font-body-lg: "Inter", sans-serif;
+  --font-body-md: "Inter", sans-serif;
+  --font-label-sm: "Inter", sans-serif;
+
+  --text-display-lg: 48px;
+  --text-display-lg--line-height: 56px;
+  --text-display-lg--letter-spacing: -0.02em;
+  --text-display-lg-mobile: 32px;
+  --text-display-lg-mobile--line-height: 40px;
+  --text-display-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-label-sm: 13px;
+  --text-label-sm--line-height: 16px;
+  --text-label-sm--letter-spacing: 0.05em;
+}
+
+/* === Global Styles === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f9ff;
+  color: #0b1c30;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+*::selection {
+  background-color: #fe6b00;
+  color: white;
+}
+
+/* === Utility Classes === */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navy-gradient {
+  background: linear-gradient(135deg, #0A1B4D 0%, #162E74 100%);
+}
+
+.hero-overlay {
+  background: linear-gradient(to right, rgba(10, 27, 77, 0.9) 0%, rgba(10, 27, 77, 0.4) 100%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* === Scroll Animations === */
+.animate-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-left {
+  transform: translateX(-100px);
+}
+
+.animate-right {
+  transform: translateX(100px);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
