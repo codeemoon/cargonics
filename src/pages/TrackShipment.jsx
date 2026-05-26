@@ -34,7 +34,7 @@ const HISTORY = [
 
 export default function TrackShipment() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [trackingInput, setTrackingInput] = useState('CE-2024-9981')
+  const [trackingInput, setTrackingInput] = useState('')
   const [showResult, setShowResult] = useState(true)
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
@@ -123,7 +123,7 @@ export default function TrackShipment() {
                   <Search size={20} className="text-[#767680] mr-3 flex-shrink-0" />
                   <input
                     className="w-full border-none outline-none text-[16px] text-[#000520] placeholder:text-[#767680] py-4 bg-transparent"
-                    placeholder="Enter Tracking Number (e.g., CE-2024-9981)"
+                    placeholder="Enter Tracking Number"
                     type="text" value={trackingInput} onChange={(e) => setTrackingInput(e.target.value)} />
                 </div>
                 <button type="submit"
