@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
 import { useEffect } from 'react'
 import Home from './pages/Home'
@@ -20,7 +20,7 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <Toaster position="top-center" reverseOrder={false} />
       <Routes>
@@ -34,7 +34,7 @@ function App() {
         <Route path="/get-quote" element={<GetQuote />} />
         {/* Other routes will be added here */}
       </Routes>
-    </Router>
+    </>
   )
 }
 
