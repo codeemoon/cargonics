@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
+import {
+  Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
+  ChevronsDown, Crosshair, ShieldCheck, Zap, Network, ArrowLeft, ArrowRight,
+  ChevronDown, Mail, Phone
+} from 'lucide-react'
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -38,10 +43,10 @@ export default function Home() {
           <div className="flex items-center justify-between h-16">
             {/* Brand Logo */}
             <Link to="/" className="flex items-center h-16 overflow-hidden">
-              <img 
-                src="/logo/new logo.png" 
-                alt="Cargonics Express" 
-                className="h-36 w-auto object-contain -my-10 mix-blend-multiply" 
+              <img
+                src="/logo/new logo.png"
+                alt="Cargonics Express"
+                className="h-36 w-auto object-contain -my-10 mix-blend-multiply"
               />
             </Link>
 
@@ -62,7 +67,7 @@ export default function Home() {
               </Link>
               {/* Mobile Menu Toggle */}
               <button className="md:hidden text-[#000520]" onClick={toggleMobileMenu}>
-                <span className="material-symbols-outlined">menu</span>
+                <Menu size={24} />
               </button>
             </div>
           </div>
@@ -79,34 +84,34 @@ export default function Home() {
           >
             <div className="px-6 mb-10 flex items-center justify-between">
               <Link to="/" onClick={toggleMobileMenu} className="flex items-center h-16 overflow-hidden">
-                <img 
-                  src="/logo/new logo.png" 
-                  alt="Cargonics Express" 
-                  className="h-32 w-auto object-contain -my-8 mix-blend-multiply" 
+                <img
+                  src="/logo/new logo.png"
+                  alt="Cargonics Express"
+                  className="h-32 w-auto object-contain -my-8 mix-blend-multiply"
                 />
               </Link>
-              <button className="material-symbols-outlined text-[#000520]" onClick={toggleMobileMenu}>close</button>
+              <button onClick={toggleMobileMenu} className="text-[#000520]"><X size={24} /></button>
             </div>
             <nav className="flex-1 space-y-1">
               {[
-                { to: '/', icon: 'home', label: 'Home', active: true },
-                { to: '/about-us', icon: 'info', label: 'About' },
-                { to: '/our-services', icon: 'local_shipping', label: 'Services' },
-                { to: '/track-shipment', icon: 'location_on', label: 'Tracking' },
-                { to: '/network-and-coverage', icon: 'public', label: 'Network' },
-                { to: '/contact-us', icon: 'contact_support', label: 'Contact' },
+                { to: '/', Icon: HomeIcon, label: 'Home', active: true },
+                { to: '/about-us', Icon: Info, label: 'About' },
+                { to: '/our-services', Icon: Truck, label: 'Services' },
+                { to: '/track-shipment', Icon: MapPin, label: 'Tracking' },
+                { to: '/network-and-coverage', Icon: Globe, label: 'Network' },
+                { to: '/contact-us', Icon: Headphones, label: 'Contact' },
               ].map((item) => (
                 <Link
                   key={item.to}
                   to={item.to}
                   onClick={toggleMobileMenu}
                   className={`flex items-center gap-4 py-3 px-6 transition-colors text-[16px] ${
-                    item.active 
-                      ? 'bg-[#fe6b00] text-white rounded-lg mx-2 font-bold' 
+                    item.active
+                      ? 'bg-[#fe6b00] text-white rounded-lg mx-2 font-bold'
                       : 'text-[#45464f] hover:bg-[#dce9ff]'
                   }`}
                 >
-                  <span className="material-symbols-outlined">{item.icon}</span> {item.label}
+                  <item.Icon size={20} /> {item.label}
                 </Link>
               ))}
             </nav>
@@ -155,7 +160,7 @@ export default function Home() {
 
          {/* Floating Scroll Indicator */}
          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-           <span className="material-symbols-outlined text-white/50" style={{ fontSize: '32px' }}>keyboard_double_arrow_down</span>
+           <ChevronsDown size={32} className="text-white/50" />
          </div>
        </section>
 
@@ -181,7 +186,7 @@ export default function Home() {
                   onClick={handleTrack}
                   className="bg-[#0a1b4d] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#162E74] transition-colors flex items-center justify-center gap-2"
                 >
-                  <span className="material-symbols-outlined">my_location</span>
+                  <Crosshair size={20} />
                   Track Now
                 </button>
               </div>
@@ -261,13 +266,13 @@ export default function Home() {
             <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold mt-4 mb-8 leading-tight">The Cargonics Competitive Edge</h2>
             <div className="space-y-8">
               {[
-                { icon: 'verified_user', title: 'Unmatched Reliability', desc: '99.8% on-time delivery rate with fully insured cargo handling.' },
-                { icon: 'bolt', title: 'Hyper Speed', desc: 'Optimized routing algorithms that reduce transit times by up to 24 hours.' },
-                { icon: 'hub', title: 'Expansive Network', desc: 'Strategic hubs across major trade corridors in India and the world.' },
+                { Icon: ShieldCheck, title: 'Unmatched Reliability', desc: '99.8% on-time delivery rate with fully insured cargo handling.' },
+                { Icon: Zap, title: 'Hyper Speed', desc: 'Optimized routing algorithms that reduce transit times by up to 24 hours.' },
+                { Icon: Network, title: 'Expansive Network', desc: 'Strategic hubs across major trade corridors in India and the world.' },
               ].map((item) => (
                 <div key={item.title} className="flex gap-6">
                   <div className="flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center border" style={{ background: 'rgba(255,255,255,0.10)', borderColor: 'rgba(255,255,255,0.20)' }}>
-                    <span className="material-symbols-outlined text-[#fe6b00]">{item.icon}</span>
+                    <item.Icon size={22} className="text-[#fe6b00]" />
                   </div>
                   <div>
                     <h4 className="font-[Montserrat] text-[24px] font-semibold mb-2">{item.title}</h4>
@@ -314,7 +319,7 @@ export default function Home() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <div className="inline-block p-12 rounded-full animate-pulse" style={{ border: '1px solid rgba(0,5,32,0.10)', background: 'rgba(255,255,255,0.20)', backdropFilter: 'blur(8px)' }}>
-                <span className="material-symbols-outlined text-[#000520]" style={{ fontSize: '60px' }}>public</span>
+                <Globe size={60} className="text-[#000520]" />
               </div>
             </div>
           </div>
@@ -341,10 +346,10 @@ export default function Home() {
             </div>
             <div className="flex gap-4">
               <button className="w-12 h-12 rounded-full border flex items-center justify-center hover:bg-white transition-colors" style={{ borderColor: '#767680' }}>
-                <span className="material-symbols-outlined">arrow_back</span>
+                <ArrowLeft size={20} />
               </button>
               <button className="w-12 h-12 rounded-full border flex items-center justify-center hover:bg-white transition-colors" style={{ borderColor: '#767680' }}>
-                <span className="material-symbols-outlined">arrow_forward</span>
+                <ArrowRight size={20} />
               </button>
             </div>
           </div>
@@ -382,9 +387,7 @@ export default function Home() {
                   onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
                 >
                   {faq.q}
-                  <span className="material-symbols-outlined transition-transform flex-shrink-0 ml-4" style={{ transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0deg)' }}>
-                    expand_more
-                  </span>
+                  <ChevronDown size={22} className="flex-shrink-0 ml-4 transition-transform" style={{ transform: openFaq === i ? 'rotate(180deg)' : 'rotate(0deg)' }} />
                 </button>
                 {openFaq === i && (
                   <div className="p-6 pt-0 text-[16px] text-[#45464f] border-t" style={{ borderColor: 'rgba(198,197,208,0.20)' }}>
@@ -429,33 +432,24 @@ export default function Home() {
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
         <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
-            <div className="inline-block bg-white p-3.5 rounded-2xl shadow-sm mb-4">
-              <img 
-                src="/logo/new logo.png" 
-                alt="Cargonics Express" 
-                className="h-16 w-auto object-contain" 
-              />
+            <div className="flex items-center h-16 overflow-hidden mb-4">
+              <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />
             </div>
             <p className="text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>
               Empowering global trade through technological precision and logistical excellence.
             </p>
             <div className="space-y-2 pt-2 text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>
               <p className="flex items-start gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">location_on</span>
-                <span>
-                  Cabin No 201, SCO No-2,<br />
-                  Chaura Bazar 2,<br />
-                  Chandigarh-Ambala Highway,<br />
-                  Zirakpur, Punjab.
-                </span>
+                <MapPin size={18} className="text-[#fe6b00] mt-0.5 flex-shrink-0" />
+                <span>Cabin No 201, SCO No-2,<br />Chaura Bazar 2,<br />Chandigarh-Ambala Highway,<br />Zirakpur, Punjab.</span>
               </p>
               <p className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">call</span>
+                <Phone size={18} className="text-[#fe6b00]" />
                 <span>+91 9599196008</span>
               </p>
               <p className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">mail</span>
-                <span>contact@cargonics.com</span>
+                <Mail size={18} className="text-[#fe6b00]" />
+                <span>info@cargonics.com</span>
               </p>
             </div>
           </div>
@@ -513,23 +507,23 @@ export default function Home() {
       {/* ── Mobile Bottom NavBar ── */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-50 px-4 py-3 flex justify-around border-t shadow-2xl" style={{ background: '#f8f9ff', borderColor: '#c6c5d0' }}>
         <Link to="/" className="flex flex-col items-center gap-1 text-[#fe6b00]">
-          <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
+          <HomeIcon size={22} />
           <span className="text-[10px] font-bold">Home</span>
         </Link>
         <Link to="/about-us" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">info</span>
+          <Info size={22} />
           <span className="text-[10px] font-bold">About</span>
         </Link>
         <Link to="/our-services" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">local_shipping</span>
+          <Truck size={22} />
           <span className="text-[10px] font-bold">Services</span>
         </Link>
         <Link to="/track-shipment" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">location_on</span>
+          <MapPin size={22} />
           <span className="text-[10px] font-bold">Track</span>
         </Link>
         <Link to="/contact-us" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">contact_support</span>
+          <Headphones size={22} />
           <span className="text-[10px] font-bold">Contact</span>
         </Link>
       </div>
@@ -542,7 +536,7 @@ export default function Home() {
         target="_blank"
         rel="noreferrer"
       >
-        <span className="material-symbols-outlined" style={{ fontSize: '24px' }}>chat</span>
+        <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-1.122 4.102 4.195-1.1c.96.539 2.016.88 3.09.88 3.181 0 5.767-2.586 5.768-5.766 0-3.18-2.586-5.769-5.767-5.769zm3.387 8.192c-.146.415-.852.762-1.157.808-.304.048-.681.088-1.985-.452-1.57-.649-2.58-2.249-2.658-2.353-.078-.103-.639-.851-.639-1.624s.401-1.151.543-1.306c.143-.155.309-.193.412-.193.104 0 .207.001.297.006.096.004.225-.035.352.27.13.313.444 1.077.482 1.154.039.077.065.167.013.271-.052.103-.077.167-.155.257-.077.091-.161.203-.23.273-.078.077-.159.16-.068.315.091.155.404.667.865 1.077.595.53 1.096.694 1.25.772.155.077.247.065.338-.041.091-.106.39-.452.494-.606.104-.155.208-.13.351-.077.143.052.906.427 1.062.505.155.077.259.116.297.181.04.063.04.364-.105.779z" /></svg>
         <span className="hidden md:inline font-bold text-[13px]">WhatsApp Us</span>
       </a>
 

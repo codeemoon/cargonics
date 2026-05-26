@@ -120,9 +120,6 @@ body {
   background: linear-gradient(to right, rgba(10, 27, 77, 0.9) 0%, rgba(10, 27, 77, 0.4) 100%);
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-}
 
 /* === Scroll Animations === */
 .animate-on-scroll {

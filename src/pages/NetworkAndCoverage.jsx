@@ -1,5 +1,10 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import {
+  Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
+  Warehouse, Activity, PlaneTakeoff, CheckCheck, Rocket, ArrowRight,
+  Building2, Network, Mail, Phone
+} from 'lucide-react'
 
 export default function NetworkAndCoverage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -12,30 +17,9 @@ export default function NetworkAndCoverage() {
   ]
 
   const infraCards = [
-    {
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3x1X2CD_vW-f00b5JZzAwMT0iRZsu9GXsu0g1WDupTtT9QFS8jZf3CvC3zVIxxn9b2bhzwWwHP4Gy46ljofmcEfXZesFQF83tSFRtwn-BtKAsSyimRGKYvEPu8ep-C7U5NoKPDR2yq7CLfxoyKZqvpp8rPVkIbXdPh_4qHoRobKjaCDDBNDnAAY5RYmvZuPpBAKEcUWKw7R2fpiX8XpvfNGc8rztV9oGOUSBQBkU3F7VG_zQ6C5Eqo3xAnqboH-rtdDfJvyv3Euo',
-      alt: 'Modern fulfillment center with orange shelves and robotic carts',
-      icon: 'warehouse', tag: 'Smart Warehousing',
-      title: 'Bonded Storage',
-      desc: 'Climate-controlled hubs at all major ports for sensitive cargo and high-value electronics.',
-      link: 'View Locations',
-    },
-    {
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCHJ1e4phYF3__l5yw3sWFNm35aoTDKED4CbJUiLg2Zgkb-3Tb58Y0DuU4HBzBj3gVDeYfI6L8bZg_UF-Hj8xtmlz_jQZydFvSLOSN_mg26ob2fa0jxvV8fPGcUxrI8TgSH8a-q7RfYjxVGqZW_mLB5Nrx5Kh9rDNbOtif3CSX5QPrM09KvGKHRzSX2BSCdu04ZERQyM0kP7AmepGfZDzMROEkagbSf_RTQRDznY8RIJvItMTMq4hx2mWiNnFgcjckxuG_D94SRdLM',
-      alt: 'Fleet of white semi-trucks with branding lined up at logistics terminal',
-      icon: 'local_shipping', tag: 'Surface Fleet',
-      title: 'Green Fleet Initiative',
-      desc: 'Our fleet includes 100+ Electric Vehicles for eco-friendly last-mile delivery in urban centers.',
-      link: 'Sustainability Report',
-    },
-    {
-      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVnd3G9sT5akb0Ln637uAU-FbH8avkCSnMRIwrR2pb9TG0yRW9ePPh-_DA-nnnv3_pihdptYpndrO_dRLPijN08rivpGq2R7owL67VzkUVIBd7XRrR4vZfumMD4OMv3FrOylf4FgfzxggJdI2IdhDDYOcQDfh41V9NGX4ahM01zb-O6kBG5FKrK-9u-aLSEgcmHQklDQfQxNdLar9XfIpRWP-HGIvqGXbpRY4vYVXthNV_y8zjkmg017ZdBu0YbX3wPRoXSixoogo',
-      alt: 'High-tech control room with wall screens showing global shipment routes',
-      icon: 'monitoring', tag: 'Tech Stack',
-      title: 'Real-time Visibility',
-      desc: 'IoT-integrated tracking providing 100% visibility into shipment location and environmental conditions.',
-      link: 'Explore Platform',
-    },
+    { img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3x1X2CD_vW-f00b5JZzAwMT0iRZsu9GXsu0g1WDupTtT9QFS8jZf3CvC3zVIxxn9b2bhzwWwHP4Gy46ljofmcEfXZesFQF83tSFRtwn-BtKAsSyimRGKYvEPu8ep-C7U5NoKPDR2yq7CLfxoyKZqvpp8rPVkIbXdPh_4qHoRobKjaCDDBNDnAAY5RYmvZuPpBAKEcUWKw7R2fpiX8XpvfNGc8rztV9oGOUSBQBkU3F7VG_zQ6C5Eqo3xAnqboH-rtdDfJvyv3Euo', alt: 'Modern fulfillment center', Icon: Warehouse, tag: 'Smart Warehousing', title: 'Bonded Storage', desc: 'Climate-controlled hubs at all major ports for sensitive cargo and high-value electronics.', link: 'View Locations' },
+    { img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCHJ1e4phYF3__l5yw3sWFNm35aoTDKED4CbJUiLg2Zgkb-3Tb58Y0DuU4HBzBj3gVDeYfI6L8bZg_UF-Hj8xtmlz_jQZydFvSLOSN_mg26ob2fa0jxvV8fPGcUxrI8TgSH8a-q7RfYjxVGqZW_mLB5Nrx5Kh9rDNbOtif3CSX5QPrM09KvGKHRzSX2BSCdu04ZERQyM0kP7AmepGfZDzMROEkagbSf_RTQRDznY8RIJvItMTMq4hx2mWiNnFgcjckxuG_D94SRdLM', alt: 'Fleet of white semi-trucks', Icon: Truck, tag: 'Surface Fleet', title: 'Green Fleet Initiative', desc: 'Our fleet includes 100+ Electric Vehicles for eco-friendly last-mile delivery in urban centers.', link: 'Sustainability Report' },
+    { img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVnd3G9sT5akb0Ln637uAU-FbH8avkCSnMRIwrR2pb9TG0yRW9ePPh-_DA-nnnv3_pihdptYpndrO_dRLPijN08rivpGq2R7owL67VzkUVIBd7XRrR4vZfumMD4OMv3FrOylf4FgfzxggJdI2IdhDDYOcQDfh41V9NGX4ahM01zb-O6kBG5FKrK-9u-aLSEgcmHQklDQfQxNdLar9XfIpRWP-HGIvqGXbpRY4vYVXthNV_y8zjkmg017ZdBu0YbX3wPRoXSixoogo', alt: 'High-tech control room', Icon: Activity, tag: 'Tech Stack', title: 'Real-time Visibility', desc: 'IoT-integrated tracking providing 100% visibility into shipment location and environmental conditions.', link: 'Explore Platform' },
   ]
 
   return (
@@ -47,11 +31,7 @@ export default function NetworkAndCoverage() {
         <div className="flex flex-col w-full px-4 md:px-[48px] py-2 max-w-[1280px] mx-auto">
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center h-16 overflow-hidden">
-              <img 
-                src="/logo/new logo.png" 
-                alt="Cargonics Express" 
-                className="h-36 w-auto object-contain -my-10 mix-blend-multiply" 
-              />
+              <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10 mix-blend-multiply" />
             </Link>
             <nav className="hidden md:flex items-center gap-8">
               <Link to="/" className="text-[#45464f] font-medium hover:text-[#fe6b00] transition-all duration-300 text-[16px]">Home</Link>
@@ -62,13 +42,8 @@ export default function NetworkAndCoverage() {
               <Link to="/contact-us" className="text-[#45464f] font-medium hover:text-[#fe6b00] transition-all duration-300 text-[16px]">Contact</Link>
             </nav>
             <div className="flex items-center gap-4">
-              <Link to="/get-quote" className="bg-[#0a1b4d] text-white px-6 py-2.5 rounded-lg font-bold text-[16px] hover:shadow-lg active:scale-95 transition-all">
-                Get Quote
-              </Link>
-              {/* Mobile hamburger */}
-              <button className="md:hidden text-[#000520]" onClick={toggleMobileMenu}>
-                <span className="material-symbols-outlined">menu</span>
-              </button>
+              <Link to="/get-quote" className="bg-[#0a1b4d] text-white px-6 py-2.5 rounded-lg font-bold text-[16px] hover:shadow-lg active:scale-95 transition-all">Get Quote</Link>
+              <button className="md:hidden text-[#000520]" onClick={toggleMobileMenu}><Menu size={24} /></button>
             </div>
           </div>
         </div>
@@ -77,49 +52,32 @@ export default function NetworkAndCoverage() {
       {/* ── Mobile Side Nav ── */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm" onClick={toggleMobileMenu}>
-          <div
-            className="h-full w-64 border-r border-[#c6c5d0] shadow-2xl flex flex-col py-6 transition-transform duration-300"
-            style={{ background: '#f8f9ff' }}
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="h-full w-64 border-r border-[#c6c5d0] shadow-2xl flex flex-col py-6 transition-transform duration-300"
+            style={{ background: '#f8f9ff' }} onClick={(e) => e.stopPropagation()}>
             <div className="px-6 mb-10 flex items-center justify-between">
               <Link to="/" onClick={toggleMobileMenu} className="flex items-center h-16 overflow-hidden">
-                <img 
-                  src="/logo/new logo.png" 
-                  alt="Cargonics Express" 
-                  className="h-32 w-auto object-contain -my-8 mix-blend-multiply" 
-                />
+                <img src="/logo/new logo.png" alt="Cargonics Express" className="h-32 w-auto object-contain -my-8 mix-blend-multiply" />
               </Link>
-              <button className="material-symbols-outlined text-[#000520]" onClick={toggleMobileMenu}>close</button>
+              <button onClick={toggleMobileMenu} className="text-[#000520]"><X size={24} /></button>
             </div>
             <nav className="flex-1 space-y-1">
               {[
-                { to: '/', icon: 'home', label: 'Home' },
-                { to: '/about-us', icon: 'info', label: 'About' },
-                { to: '/our-services', icon: 'local_shipping', label: 'Services' },
-                { to: '/track-shipment', icon: 'location_on', label: 'Tracking' },
-                { to: '/network-and-coverage', icon: 'public', label: 'Network', active: true },
-                { to: '/contact-us', icon: 'contact_support', label: 'Contact' },
+                { to: '/', Icon: HomeIcon, label: 'Home' },
+                { to: '/about-us', Icon: Info, label: 'About' },
+                { to: '/our-services', Icon: Truck, label: 'Services' },
+                { to: '/track-shipment', Icon: MapPin, label: 'Tracking' },
+                { to: '/network-and-coverage', Icon: Globe, label: 'Network', active: true },
+                { to: '/contact-us', Icon: Headphones, label: 'Contact' },
               ].map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={toggleMobileMenu}
-                  className={`flex items-center gap-4 py-3 px-6 transition-colors text-[16px] ${
-                    item.active 
-                      ? 'bg-[#fe6b00] text-white rounded-lg mx-2 font-bold' 
-                      : 'text-[#45464f] hover:bg-[#dce9ff]'
-                  }`}
-                >
-                  <span className="material-symbols-outlined">{item.icon}</span> {item.label}
+                <Link key={item.to} to={item.to} onClick={toggleMobileMenu}
+                  className={`flex items-center gap-4 py-3 px-6 transition-colors text-[16px] ${item.active ? 'bg-[#fe6b00] text-white rounded-lg mx-2 font-bold' : 'text-[#45464f] hover:bg-[#dce9ff]'}`}>
+                  <item.Icon size={20} /> {item.label}
                 </Link>
               ))}
             </nav>
             <div className="px-4 mt-auto">
               <Link to="/get-quote" onClick={toggleMobileMenu}
-                className="w-full block text-center bg-[#000520] text-white py-4 rounded-xl font-bold active:scale-95 transition-all">
-                Get Quote
-              </Link>
+                className="w-full block text-center bg-[#000520] text-white py-4 rounded-xl font-bold active:scale-95 transition-all">Get Quote</Link>
             </div>
           </div>
         </div>
@@ -130,18 +88,13 @@ export default function NetworkAndCoverage() {
 {/* ── Hero: Global Reach ── */}
        <section className="relative flex items-center overflow-hidden" style={{ height: '500px' }}>
          <div className="absolute inset-0 z-0">
-           <img
-             className="w-full h-full object-cover"
-             alt="Massive cargo ship crossing the deep blue ocean during a golden hour sunset"
-             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4iO5qKHgzCNBFBRdBmYTPBYuUjYr74_-y-sK1mk6cMgS7hZRbFjtzLv71M_BbkHK82nFiy9HLRaV3FYEzEDnAWI82tI3z2K7sCKxmCiYT-JwpTV_e7SVYagu4hWiuzhHnyoaSeUCVVV42yE5wzlbvbIA5Weq4NubRKMTyPHvqkOf-Be28ezjEfwGmNVf-ys5dDwxnH0uwUzCL0smbhnwkFBMQYHzT8wWpcmavfXkjPapbIaY2PGwzdUZNvtBuVNbJW35VIOEh28Y"
-           />
+           <img className="w-full h-full object-cover" alt="Massive cargo ship crossing the deep blue ocean during a golden hour sunset"
+             src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4iO5qKHgzCNBFBRdBmYTPBYuUjYr74_-y-sK1mk6cMgS7hZRbFjtzLv71M_BbkHK82nFiy9HLRaV3FYEzEDnAWI82tI3z2K7sCKxmCiYT-JwpTV_e7SVYagu4hWiuzhHnyoaSeUCVVV42yE5wzlbvbIA5Weq4NubRKMTyPHvqkOf-Be28ezjEfwGmNVf-ys5dDwxnH0uwUzCL0smbhnwkFBMQYHzT8wWpcmavfXkjPapbIaY2PGwzdUZNvtBuVNbJW35VIOEh28Y" />
            <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(10,27,77,0.85) 0%, rgba(22,46,116,0.70) 100%)' }}></div>
          </div>
          <div className="relative z-10 w-full px-4 md:px-[48px] max-w-[1280px] mx-auto text-white">
            <div className="max-w-xl">
-             <span className="inline-block bg-[#fe6b00] text-white px-3 py-1 rounded-full text-[12px] font-bold mb-4 tracking-[0.05em]">
-               GLOBAL CONNECTIVITY
-             </span>
+             <span className="inline-block bg-[#fe6b00] text-white px-3 py-1 rounded-full text-[12px] font-bold mb-4 tracking-[0.05em]">GLOBAL CONNECTIVITY</span>
              <h1 className="font-[Montserrat] text-[28px] md:text-[40px] font-bold mb-4" style={{ letterSpacing: '-0.02em', lineHeight: '48px' }}>
                Connecting Every Mile, Across Every Border.
              </h1>
@@ -149,12 +102,8 @@ export default function NetworkAndCoverage() {
                Our expansive network spans over 220 countries and territories, powered by infrastructure built for precision.
              </p>
              <div className="flex flex-wrap gap-3">
-               <button className="bg-[#fe6b00] hover:bg-[#a04100] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg">
-                 Explore Global Routes
-               </button>
-               <button className="border-2 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all backdrop-blur-sm" style={{ borderColor: 'rgba(255,255,255,0.30)' }}>
-                 Infrastructure
-               </button>
+               <button className="bg-[#fe6b00] hover:bg-[#a04100] text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg">Explore Global Routes</button>
+               <button className="border-2 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all backdrop-blur-sm" style={{ borderColor: 'rgba(255,255,255,0.30)' }}>Infrastructure</button>
              </div>
            </div>
          </div>
@@ -173,14 +122,14 @@ export default function NetworkAndCoverage() {
                 </p>
                 <div className="space-y-4">
                   {[
-                    { icon: 'location_city', title: 'Metro Connectivity', desc: 'Same-day delivery in Delhi, Mumbai, Bengaluru, and Chennai.' },
-                    { icon: 'local_shipping', title: 'Tier 2 & 3 Reach', desc: 'Extensive surface network covering 19,000+ pin codes.' },
-                    { icon: 'hub', title: 'Automated Sort Centers', desc: 'Precision handling with zero-error sortation technology.' },
+                    { Icon: Building2, title: 'Metro Connectivity', desc: 'Same-day delivery in Delhi, Mumbai, Bengaluru, and Chennai.' },
+                    { Icon: Truck, title: 'Tier 2 & 3 Reach', desc: 'Extensive surface network covering 19,000+ pin codes.' },
+                    { Icon: Network, title: 'Automated Sort Centers', desc: 'Precision handling with zero-error sortation technology.' },
                   ].map((item) => (
                     <div key={item.title} className="flex items-center gap-4 p-4 rounded-xl border hover:shadow-md transition-all cursor-pointer"
                       style={{ background: '#eff4ff', borderColor: 'rgba(198,197,208,0.30)' }}>
                       <div className="w-12 h-12 rounded-lg bg-[#0a1b4d] flex items-center justify-center text-white flex-shrink-0">
-                        <span className="material-symbols-outlined">{item.icon}</span>
+                        <item.Icon size={22} />
                       </div>
                       <div>
                         <h4 className="font-bold text-[#000520] text-[16px]">{item.title}</h4>
@@ -193,13 +142,9 @@ export default function NetworkAndCoverage() {
 
               {/* Map Panel */}
               <div className="lg:col-span-7 relative rounded-3xl overflow-hidden shadow-2xl" style={{ height: '600px', background: '#0A1B4D' }}>
-                {/* Map background */}
                 <div className="absolute inset-0" style={{ opacity: 0.40 }}>
-                  <img
-                    className="w-full h-full object-cover"
-                    alt="Dark navy blue stylistic map of India glowing with neon orange nodes at major hubs"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zlm6hS8mNU8lDZ0Jg88S3lgzd5aaO_8sGKhCNOmkMb9Xr2LiEg4r2sufQPmdbOx-85FGYI9Qnbp0HIWpLX9IphIF7w7-rluPtA6qxGZOgPH5xc90J6s3uei_AxsYsydfatX2XXnoLv4pH8diw0bLtMkBqR1-OLId9QMHNiusIaXDhXi4mXuQ-t2FSbFj5q7kNriitDiJds0jQSBK2poPKozKyCvwuHAIBFJGjdzfwIw6JrTT-N1K4u-LlxiatoOcthUcVlYW6qQ"
-                  />
+                  <img className="w-full h-full object-cover" alt="Dark navy blue stylistic map of India glowing with neon orange nodes at major hubs"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Zlm6hS8mNU8lDZ0Jg88S3lgzd5aaO_8sGKhCNOmkMb9Xr2LiEg4r2sufQPmdbOx-85FGYI9Qnbp0HIWpLX9IphIF7w7-rluPtA6qxGZOgPH5xc90J6s3uei_AxsYsydfatX2XXnoLv4pH8diw0bLtMkBqR1-OLId9QMHNiusIaXDhXi4mXuQ-t2FSbFj5q7kNriitDiJds0jQSBK2poPKozKyCvwuHAIBFJGjdzfwIw6JrTT-N1K4u-LlxiatoOcthUcVlYW6qQ" />
                 </div>
 
                 {/* Animated Hub Markers */}
@@ -223,10 +168,10 @@ export default function NetworkAndCoverage() {
                     </div>
                     <div className="flex -space-x-3">
                       <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-white" style={{ background: '#22c55e' }}>
-                        <span className="material-symbols-outlined text-sm">done_all</span>
+                        <CheckCheck size={16} />
                       </div>
                       <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center text-white" style={{ background: '#3b82f6' }}>
-                        <span className="material-symbols-outlined text-sm">rocket_launch</span>
+                        <Rocket size={16} />
                       </div>
                     </div>
                   </div>
@@ -241,9 +186,7 @@ export default function NetworkAndCoverage() {
         <section className="py-24" style={{ background: '#eff4ff' }}>
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
             <div className="text-center mb-16">
-              <h2 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-[#0a1b4d] mb-4" style={{ letterSpacing: '-0.02em' }}>
-                International Arteries
-              </h2>
+              <h2 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-[#0a1b4d] mb-4" style={{ letterSpacing: '-0.02em' }}>International Arteries</h2>
               <p className="max-w-2xl mx-auto text-[#45464f] text-[18px] leading-[28px]">
                 We bridge continents with scheduled freighter services and strategic partnerships with global air and sea carriers.
               </p>
@@ -251,20 +194,15 @@ export default function NetworkAndCoverage() {
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-[24px] auto-rows-fr" style={{ minHeight: '600px' }}>
 
-              {/* Asia-Pacific — col-span-2, row-span-2 */}
+              {/* Asia-Pacific */}
               <div className="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-3xl" style={{ background: '#0a1b4d', minHeight: '300px' }}>
-                <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  style={{ opacity: 0.60 }}
-                  alt="Birds-eye view of a bustling Asian container port at night with neon lights"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaoR0NusJ7tK9JXmuvJAnC5RbRRPuBg0FbyaHuPnVvoKgQ8VdIPnom5fcItrhL1gzy4Y2dwgBUMUPdYeIvUFxcnK4Yg6r25mz9LwDNVBjeABSFyBVvapPZmHJ-a-dK5Am6jzIOuan0QK7GKqXg9B0bmRNlECRsLJF30E3vuz5pOczyaB4cqUpKwXg_J5Q0-TDXelcHDTUAf1PGGy3h7QubJhd2BmJrdldr4M-bX8JEkXeAo9y8JImex1OgpzMiiYxegolb6-0BvYQ"
-                />
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style={{ opacity: 0.60 }}
+                  alt="Birds-eye view of a bustling Asian container port at night"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaoR0NusJ7tK9JXmuvJAnC5RbRRPuBg0FbyaHuPnVvoKgQ8VdIPnom5fcItrhL1gzy4Y2dwgBUMUPdYeIvUFxcnK4Yg6r25mz9LwDNVBjeABSFyBVvapPZmHJ-a-dK5Am6jzIOuan0QK7GKqXg9B0bmRNlECRsLJF30E3vuz5pOczyaB4cqUpKwXg_J5Q0-TDXelcHDTUAf1PGGy3h7QubJhd2BmJrdldr4M-bX8JEkXeAo9y8JImex1OgpzMiiYxegolb6-0BvYQ" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-white"
                   style={{ background: 'linear-gradient(to top, rgba(10,27,77,1) 0%, transparent 60%)' }}>
                   <h3 className="font-[Montserrat] text-[24px] font-semibold mb-2">Asia-Pacific Gateway</h3>
-                  <p className="mb-6 text-[16px]" style={{ color: '#7684bc' }}>
-                    Daily freighter flights connecting Singapore, Hong Kong, and Shanghai hubs to the world.
-                  </p>
+                  <p className="mb-6 text-[16px]" style={{ color: '#7684bc' }}>Daily freighter flights connecting Singapore, Hong Kong, and Shanghai hubs to the world.</p>
                   <button className="w-fit backdrop-blur-md text-white px-6 py-2 rounded-lg font-bold border transition-all hover:bg-white/30"
                     style={{ background: 'rgba(255,255,255,0.20)', borderColor: 'rgba(255,255,255,0.30)' }}>
                     Route Schedule
@@ -274,24 +212,19 @@ export default function NetworkAndCoverage() {
 
               {/* European Corridor */}
               <div className="md:col-span-2 relative group overflow-hidden rounded-3xl" style={{ background: '#fe6b00', minHeight: '280px' }}>
-                <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  style={{ opacity: 0.50 }}
-                  alt="Cargo plane being loaded at a European airport during the blue hour"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOa4meDviRIBiyYUy8bdfODwa5cNcIbI8oVLKMifOELTuP-niAF8zpNnBtUXTB9JiSk6KlYW0fXkCBsKuw7Iu_5wllWKtZL6zH_PVLBpTgSAaw4pwd_aQJ68IkpXOc1gVVu29UDYtZE9Xtmeci5Z9O2uomYLt-JwLtZ6uhOQEJPUdp7OxhHu-Vq5sluuLEYlTA5OPLl6rNcxRf4dL9h3POyExpTpsQtlt7o7xcOFTVVZcVZL2ENwduwrn4dvUm5Z-Bbsrn6vJdlo"
-                />
+                <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" style={{ opacity: 0.50 }}
+                  alt="Cargo plane being loaded at a European airport"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJOa4meDviRIBiyYUy8bdfODwa5cNcIbI8oVLKMifOELTuP-niAF8zpNnBtUXTB9JiSk6KlYW0fXkCBsKuw7Iu_5wllWKtZL6zH_PVLBpTgSAaw4pwd_aQJ68IkpXOc1gVVu29UDYtZE9Xtmeci5Z9O2uomYLt-JwLtZ6uhOQEJPUdp7OxhHu-Vq5sluuLEYlTA5OPLl6rNcxRf4dL9h3POyExpTpsQtlt7o7xcOFTVVZcVZL2ENwduwrn4dvUm5Z-Bbsrn6vJdlo" />
                 <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
                   <h3 className="font-[Montserrat] text-[24px] font-semibold mb-2">European Corridor</h3>
-                  <p className="text-[16px]" style={{ color: 'rgba(255,255,255,0.80)' }}>
-                    Direct air-bridge connecting Frankfurt and London to Indian Metros.
-                  </p>
+                  <p className="text-[16px]" style={{ color: 'rgba(255,255,255,0.80)' }}>Direct air-bridge connecting Frankfurt and London to Indian Metros.</p>
                 </div>
               </div>
 
               {/* Middle East — Stats card */}
               <div className="relative group overflow-hidden rounded-3xl" style={{ background: '#0A1B4D', minHeight: '280px' }}>
                 <div className="absolute inset-0 p-6 flex flex-col justify-center items-center text-center text-white">
-                  <span className="material-symbols-outlined mb-4 text-[#ffb693]" style={{ fontSize: '40px' }}>public</span>
+                  <Globe size={40} className="mb-4 text-[#ffb693]" />
                   <h4 className="font-[Montserrat] font-bold text-[24px]">220+</h4>
                   <p className="text-[13px] opacity-80">Countries Served</p>
                 </div>
@@ -299,7 +232,7 @@ export default function NetworkAndCoverage() {
 
               {/* Americas Route */}
               <div className="relative group overflow-hidden rounded-3xl bg-white border p-8 flex flex-col justify-between" style={{ borderColor: 'rgba(198,197,208,0.30)', minHeight: '280px' }}>
-                <span className="material-symbols-outlined text-[#fe6b00]" style={{ fontSize: '40px' }}>flight_takeoff</span>
+                <PlaneTakeoff size={40} className="text-[#fe6b00]" />
                 <div>
                   <h4 className="font-bold text-[#000520] text-[16px]">Americas Route</h4>
                   <p className="text-[13px] text-[#45464f]">Bi-weekly sea-freight consolidations to New York &amp; LA.</p>
@@ -337,21 +270,17 @@ export default function NetworkAndCoverage() {
               {infraCards.map((card) => (
                 <div key={card.title} className="group rounded-3xl overflow-hidden border hover:shadow-2xl transition-all duration-500" style={{ borderColor: 'rgba(198,197,208,0.20)' }}>
                   <div className="h-64 overflow-hidden">
-                    <img
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      alt={card.alt}
-                      src={card.img}
-                    />
+                    <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={card.alt} src={card.img} />
                   </div>
                   <div className="p-8">
                     <div className="flex items-center gap-2 mb-4 text-[#fe6b00]">
-                      <span className="material-symbols-outlined">{card.icon}</span>
+                      <card.Icon size={22} />
                       <span className="font-bold uppercase tracking-widest text-[13px]">{card.tag}</span>
                     </div>
                     <h4 className="font-[Montserrat] text-[24px] font-semibold text-[#0a1b4d] mb-3">{card.title}</h4>
                     <p className="text-[#45464f] mb-6 text-[16px]">{card.desc}</p>
                     <a className="inline-flex items-center gap-2 text-[#000520] font-bold hover:gap-4 transition-all text-[16px]" href="#">
-                      {card.link} <span className="material-symbols-outlined">arrow_forward</span>
+                      {card.link} <ArrowRight size={18} />
                     </a>
                   </div>
                 </div>
@@ -367,19 +296,15 @@ export default function NetworkAndCoverage() {
             <div className="absolute w-[600px] h-[600px] rounded-full -bottom-96 -right-96" style={{ background: '#3b82f6', filter: 'blur(150px)' }}></div>
           </div>
           <div className="relative z-10 px-4 md:px-[48px] max-w-[1280px] mx-auto text-center">
-            <h2 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>
-              Ready to scale your reach?
-            </h2>
+            <h2 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-white mb-6" style={{ letterSpacing: '-0.02em' }}>Ready to scale your reach?</h2>
             <p className="text-[18px] leading-[28px] mb-10 max-w-xl mx-auto" style={{ color: '#7684bc' }}>
               Join thousands of businesses leveraging the Cargonics network for their global logistics needs.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link to="/get-quote"
-                className="bg-[#fe6b00] hover:bg-[#a04100] text-white px-10 py-5 rounded-2xl font-bold text-[18px] shadow-xl transition-all active:scale-95">
+              <Link to="/get-quote" className="bg-[#fe6b00] hover:bg-[#a04100] text-white px-10 py-5 rounded-2xl font-bold text-[18px] shadow-xl transition-all active:scale-95">
                 Get Started Today
               </Link>
-              <Link to="/contact-us"
-                className="backdrop-blur-md text-white border px-10 py-5 rounded-2xl font-bold text-[18px] transition-all active:scale-95 hover:bg-white/20"
+              <Link to="/contact-us" className="backdrop-blur-md text-white border px-10 py-5 rounded-2xl font-bold text-[18px] transition-all active:scale-95 hover:bg-white/20"
                 style={{ background: 'rgba(255,255,255,0.10)', borderColor: 'rgba(255,255,255,0.20)' }}>
                 Talk to a Network Expert
               </Link>
@@ -393,108 +318,51 @@ export default function NetworkAndCoverage() {
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
         <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
-            <div className="inline-block bg-white p-3.5 rounded-2xl shadow-sm mb-4">
-              <img 
-                src="/logo/new logo.png" 
-                alt="Cargonics Express" 
-                className="h-16 w-auto object-contain" 
-              />
+            <div className="flex items-center h-16 overflow-hidden mb-4">
+              <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />
             </div>
-            <p className="text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>
-              Empowering global trade through technological precision and logistical excellence.
-            </p>
+            <p className="text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>Empowering global trade through technological precision and logistical excellence.</p>
             <div className="space-y-2 pt-2 text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>
-              <p className="flex items-start gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">location_on</span>
-                <span>
-                  Cabin No 201, SCO No-2,<br />
-                  Chaura Bazar 2,<br />
-                  Chandigarh-Ambala Highway,<br />
-                  Zirakpur, Punjab.
-                </span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">call</span>
-                <span>+91 9599196008</span>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-[#fe6b00] text-[18px]">mail</span>
-                <span>contact@cargonics.com</span>
-              </p>
+              <p className="flex items-start gap-2"><MapPin size={18} className="text-[#fe6b00] mt-0.5 flex-shrink-0" /><span>Cabin No 201, SCO No-2,<br />Chaura Bazar 2,<br />Chandigarh-Ambala Highway,<br />Zirakpur, Punjab.</span></p>
+              <p className="flex items-center gap-2"><Phone size={18} className="text-[#fe6b00]" /><span>+91 9599196008</span></p>
+              <p className="flex items-center gap-2"><Mail size={18} className="text-[#fe6b00]" /><span>info@cargonics.com</span></p>
             </div>
           </div>
-
           <div>
             <h4 className="font-bold text-white mb-6">Quick Links</h4>
             <ul className="space-y-2 text-[14px]">
-              {[
-                { label: 'Home', to: '/' },
-                { label: 'About Us', to: '/about-us' },
-                { label: 'Our Services', to: '/our-services' },
-                { label: 'Track Shipment', to: '/track-shipment' },
-                { label: 'Network & Coverage', to: '/network-and-coverage' },
-                { label: 'Contact Us', to: '/contact-us' },
-                { label: 'FAQs', to: '/faqs' },
-                { label: 'Get Quote', to: '/get-quote' },
-              ].map((item) => (
-                <li key={item.label}>
-                  <Link className="hover:text-white hover:underline transition-all" style={{ color: 'rgba(118,132,188,0.80)' }} to={item.to}>
-                    {item.label}
-                  </Link>
-                </li>
+              {[{ label: 'Home', to: '/' }, { label: 'About Us', to: '/about-us' }, { label: 'Our Services', to: '/our-services' }, { label: 'Track Shipment', to: '/track-shipment' }, { label: 'Network & Coverage', to: '/network-and-coverage' }, { label: 'Contact Us', to: '/contact-us' }, { label: 'FAQs', to: '/faqs' }, { label: 'Get Quote', to: '/get-quote' }].map((item) => (
+                <li key={item.label}><Link className="hover:text-white hover:underline transition-all" style={{ color: 'rgba(118,132,188,0.80)' }} to={item.to}>{item.label}</Link></li>
               ))}
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold text-white mb-6">Services</h4>
             <ul className="space-y-2 text-[14px]" style={{ color: 'rgba(118,132,188,0.80)' }}>
-              <li>Air Freight</li>
-              <li>Ocean Shipping</li>
-              <li>Surface Transport</li>
-              <li>Rail Solutions</li>
-              <li>Global Logistics</li>
+              <li>Air Freight</li><li>Ocean Shipping</li><li>Surface Transport</li><li>Rail Solutions</li><li>Global Logistics</li>
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold text-white mb-6">Legals</h4>
             <ul className="space-y-2 text-[14px]">
               {['Privacy Policy', 'Terms of Service'].map((item) => (
-                <li key={item}>
-                  <a className="hover:text-white hover:underline transition-all" style={{ color: 'rgba(118,132,188,0.80)' }} href="#">{item}</a>
-                </li>
+                <li key={item}><a className="hover:text-white hover:underline transition-all" style={{ color: 'rgba(118,132,188,0.80)' }} href="#">{item}</a></li>
               ))}
             </ul>
           </div>
         </div>
-
         <div className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-6 border-t text-center md:text-left" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
           <p className="text-[13px]" style={{ color: 'rgba(118,132,188,0.60)' }}>© 2024 Cargonics Express Services. GST: 03AANCC6927C1ZT. All Rights Reserved.</p>
         </div>
       </footer>
+
       {/* ── Mobile Bottom NavBar ── */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-50 px-4 py-3 flex justify-around border-t shadow-2xl" style={{ background: '#f8f9ff', borderColor: '#c6c5d0' }}>
-        <Link to="/" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">home</span>
-          <span className="text-[10px] font-bold">Home</span>
-        </Link>
-        <Link to="/about-us" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">info</span>
-          <span className="text-[10px] font-bold">About</span>
-        </Link>
-        <Link to="/our-services" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">local_shipping</span>
-          <span className="text-[10px] font-bold">Services</span>
-        </Link>
-        <Link to="/track-shipment" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">location_on</span>
-          <span className="text-[10px] font-bold">Track</span>
-        </Link>
-        <Link to="/contact-us" className="flex flex-col items-center gap-1 text-[#45464f]">
-          <span className="material-symbols-outlined">contact_support</span>
-          <span className="text-[10px] font-bold">Contact</span>
-        </Link>
+        <Link to="/" className="flex flex-col items-center gap-1 text-[#45464f]"><HomeIcon size={22} /><span className="text-[10px] font-bold">Home</span></Link>
+        <Link to="/about-us" className="flex flex-col items-center gap-1 text-[#45464f]"><Info size={22} /><span className="text-[10px] font-bold">About</span></Link>
+        <Link to="/our-services" className="flex flex-col items-center gap-1 text-[#45464f]"><Truck size={22} /><span className="text-[10px] font-bold">Services</span></Link>
+        <Link to="/track-shipment" className="flex flex-col items-center gap-1 text-[#45464f]"><MapPin size={22} /><span className="text-[10px] font-bold">Track</span></Link>
+        <Link to="/contact-us" className="flex flex-col items-center gap-1 text-[#45464f]"><Headphones size={22} /><span className="text-[10px] font-bold">Contact</span></Link>
       </div>
 
       {/* ── Pulse animation keyframes ── */}
