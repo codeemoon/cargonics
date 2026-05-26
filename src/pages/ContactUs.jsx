@@ -1,26 +1,14 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import 'leaflet/dist/leaflet.css'
-import L from 'leaflet'
 import {
   Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
   Mail, Phone, Send, Loader2, CheckCircle
 } from 'lucide-react'
 
-// Fix for default marker icon
-delete L.Icon.Default.prototype._getIconUrl
-L.Icon.Default.mergeOptions({
-  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-})
-
 export default function ContactUs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: 'General Inquiry', message: '' })
   const [submitState, setSubmitState] = useState('idle') // idle | sending | sent
-  const mapRef = useRef(null)
-  const mapInstanceRef = useRef(null)
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -42,20 +30,6 @@ export default function ContactUs() {
       setTimeout(() => setSubmitState('idle'), 3000)
     }, 1000)
   }
-
-  useEffect(() => {
-    if (!mapInstanceRef.current && mapRef.current) {
-      const map = L.map(mapRef.current).setView([30.6428, 76.8003], 17)
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map)
-      L.marker([30.6428, 76.8003]).addTo(map).bindPopup('Cargonics Express - Zirakpur').openPopup()
-      mapInstanceRef.current = map
-    }
-    return () => {
-      if (mapInstanceRef.current) { mapInstanceRef.current.remove(); mapInstanceRef.current = null }
-    }
-  }, [])
 
   return (
     <div className="overflow-x-hidden" style={{ background: '#f8f9ff' }}>
@@ -228,12 +202,29 @@ export default function ContactUs() {
 
             {/* ── Map & WhatsApp Panel ── */}
             <div className="flex flex-col gap-[24px]">
-              <div className="w-full rounded-2xl overflow-hidden shadow-xl border" style={{ height: '400px', borderColor: 'rgba(198,197,208,0.30)' }}>
-                <div ref={mapRef} className="w-full h-full"></div>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border" style={{ height: '400px', borderColor: 'rgba(198,197,208,0.30)' }}>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6865.758990243587!2d76.81512914278457!3d30.637353542498275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390febc6c7c54cbd%3A0x1a5d1faaca782fbf!2sAd%20Office%20Spaces%20%26%20Co-working!5e0!3m2!1sen!2sin!4v1779787187896!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cargonics Office Location Map"
+                ></iframe>
+                
+                {/* Floating Address Overlay */}
+                <div className="absolute bottom-4 left-4 right-4 md:right-auto md:max-w-[280px] glass-card p-4 rounded-xl shadow-lg border border-white/30 z-10 pointer-events-none">
+                  <p className="font-bold text-[11px] text-[#fe6b00] uppercase tracking-wider mb-1">Office Address</p>
+                  <p className="text-[13px] leading-relaxed text-[#0a1b4d] font-semibold">
+                    Cabin No 201, SCO No-2, Chaura Bazar 2, Chandigarh-Ambala Highway, Zirakpur, Punjab.
+                  </p>
+                </div>
               </div>
-              <a href="https://www.openstreetmap.org/?mlat=30.6428&mlon=76.8003#map=17/30.6428/76.8003"
+              <a href="https://maps.google.com/?q=Ad+Office+Spaces+and+Co-working+Cabin+No+201,+SCO+No-2,+Chaura+Bazar+2,+Chandigarh-Ambala+Highway,+Zirakpur,+Punjab."
                 target="_blank" rel="noreferrer" className="text-[#fe6b00] font-bold text-[14px] hover:underline">
-                View on OpenStreetMap →
+                View on Google Maps →
               </a>
 
               {/* WhatsApp CTA Card */}
@@ -292,7 +283,7 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-6 border-t text-center md:text-left" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
-          <p className="text-[13px]" style={{ color: 'rgba(118,132,188,0.60)' }}>© 2024 Cargonics Express Services. GST: 03AANCC6927C1ZT. All Rights Reserved.</p>
+          <p className="text-[13px]" style={{ color: 'rgba(118,132,188,0.60)' }}>© 2026 Cargonics Express Services. GST: 03AANCC6927C1ZT. All Rights Reserved.</p>
         </div>
       </footer>
 

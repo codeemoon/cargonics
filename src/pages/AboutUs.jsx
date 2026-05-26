@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
-  ShieldCheck, Zap, Headset, CheckCircle, Mail, Phone
+  ShieldCheck, Zap, Headset, CheckCircle, Mail, Phone, Target, Eye
 } from 'lucide-react'
 
 export default function AboutUs() {
@@ -76,40 +76,42 @@ export default function AboutUs() {
 
       <main className="pt-20">
 
-{/* ── Hero Section ── */}
-       <section className="relative flex items-center overflow-hidden" style={{ height: '500px' }}>
-         <div className="absolute inset-0 z-0">
-           <img className="w-full h-full object-cover" alt="High-tech logistics warehouse at sunset"
-             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu9qT-iRAIbIKLzx53H_Jfch9Drngtvq7w6QhKMKu-nJVXiCiFyxktmhhFC09OqzEYP0vQkjFP1GG6g8uR0CK5khVRp0vNQjTwi6AIzoxd_5ksvbut-bns9FdMK4eBVJbHOzvV3KarPC0pg7WbffKfoVOcEq9zgjhyQpU9i2EIZgPMquggZB7v9mTTTHMS3WjFeI7-B1PimEQZUk_6VxVLBZNx5LptIkiqZ1dyn2sNtSsW9juhXLh8t-WN06_o8SadKDLMv70G8AI" />
-           <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,27,77,0.85) 0%, rgba(10,27,77,0.60) 100%)' }}></div>
-         </div>
-         <div className="relative z-10 px-4 md:px-[48px] max-w-[1280px] mx-auto w-full">
-           <div className="max-w-xl">
-             <span className="bg-[#fe6b00] text-white px-3 py-1 rounded-full text-[12px] font-bold mb-4 inline-block tracking-[0.05em]">ESTABLISHED 2024</span>
-             <h1 className="font-[Montserrat] text-[28px] md:text-[40px] font-bold text-white mb-4" style={{ letterSpacing: '-0.02em', lineHeight: '48px' }}>
-               Redefining the Global Movement of Cargo
-             </h1>
-             <p className="text-[15px] leading-[26px] max-w-lg" style={{ color: '#9ab4fc' }}>
-               Cargonics Express Services is more than a logistics provider; we are the heartbeat of global commerce.
-             </p>
-           </div>
-         </div>
-       </section>
+        {/* ── Hero Section ── */}
+        <section className="relative flex items-center overflow-hidden" style={{ height: '500px' }}>
+          <div className="absolute inset-0 z-0">
+            <img className="w-full h-full object-cover" alt="High-tech logistics warehouse at sunset"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu9qT-iRAIbIKLzx53H_Jfch9Drngtvq7w6QhKMKu-nJVXiCiFyxktmhhFC09OqzEYP0vQkjFP1GG6g8uR0CK5khVRp0vNQjTwi6AIzoxd_5ksvbut-bns9FdMK4eBVJbHOzvV3KarPC0pg7WbffKfoVOcEq9zgjhyQpU9i2EIZgPMquggZB7v9mTTTHMS3WjFeI7-B1PimEQZUk_6VxVLBZNx5LptIkiqZ1dyn2sNtSsW9juhXLh8t-WN06_o8SadKDLMv70G8AI" />
+            <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(10,27,77,0.85) 0%, rgba(10,27,77,0.60) 100%)' }}></div>
+          </div>
+          <div className="relative z-10 px-4 md:px-[48px] max-w-[1280px] mx-auto w-full">
+            <div className="max-w-xl">
+              <span className="bg-[#fe6b00] text-white px-3 py-1 rounded-full text-[12px] font-bold mb-4 inline-block tracking-[0.05em]">ESTABLISHED 2026</span>
+              <h1 className="font-[Montserrat] text-[28px] md:text-[40px] font-bold text-white mb-4" style={{ letterSpacing: '-0.02em', lineHeight: '48px' }}>
+                Redefining the Global Movement of Cargo
+              </h1>
+              <p className="text-[15px] leading-[26px] max-w-lg" style={{ color: '#9ab4fc' }}>
+                Cargosnic Logistics is more than a logistics provider; we are the heartbeat of modern cargo transport.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ── Company Story & Mission ── */}
         <section className="py-24 px-4 md:px-[48px] max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-[24px] items-center">
-            <div className="md:col-span-5 space-y-8">
-              <h2 className="font-[Montserrat] text-[24px] font-semibold text-[#0a1b4d] border-l-4 border-[#fe6b00] pl-6">Our Legacy &amp; Mission</h2>
-              <p className="text-[16px] leading-relaxed text-[#45464f]">
-                Born from a vision to simplify complex global supply chains, Cargonics Express Services was founded on the principle that logistics should be invisible, yet indispensable. We have built an infrastructure that bridges continents, ensuring that distance never hinders growth.
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-[32px] items-center">
+            <div className="md:col-span-6 space-y-6">
+              <h2 className="font-[Montserrat] text-[28px] font-semibold text-[#0a1b4d] border-l-4 border-[#fe6b00] pl-6 mb-2">Who We Are</h2>
+              <p className="text-[15px] leading-[26px] text-[#45464f]">
+                Cargosnic Logistics is a modern logistics and cargo solutions company committed to delivering reliable, efficient, and secure transportation services. Founded in April 2026 by Mr. Sanjeev Pandey and Mrs. Lakshmi Pandey, the company was established with a vision to simplify logistics and provide dependable transportation solutions for businesses and individuals.
               </p>
-              <div className="p-8 rounded-xl border-l-8 border-[#fe6b00]" style={{ background: '#eff4ff' }}>
-                <h3 className="font-[Montserrat] text-[24px] font-semibold text-[#000520] mb-2 italic">"Excellence in every delivery"</h3>
-                <p className="text-[16px] text-[#45464f]">Our mission is the compass that guides every shipment, every route, and every customer interaction.</p>
-              </div>
+              <p className="text-[15px] leading-[26px] text-[#45464f]">
+                We specialize in cargo transportation, freight management, and logistics support services designed to ensure timely and safe delivery operations. With a strong focus on professionalism, customer satisfaction, and operational excellence, we aim to build long-term trust through quality service and transparent communication.
+              </p>
+              <p className="text-[15px] leading-[26px] text-[#45464f] font-semibold" style={{ color: '#0a1b4d' }}>
+                At Cargosnic Logistics, we believe logistics is more than moving goods — it is about connecting businesses, delivering commitments, and creating reliable supply chain solutions.
+              </p>
             </div>
-            <div className="md:col-span-7 grid grid-cols-2 gap-4">
+            <div className="md:col-span-6 grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img className="rounded-2xl shadow-xl w-full object-cover" style={{ height: '256px' }}
                   alt="Large cargo vessel's bow cutting through deep blue ocean waters"
@@ -127,44 +129,42 @@ export default function AboutUs() {
           </div>
         </section>
 
-        {/* ── Vision Bento Grid ── */}
-        <section className="py-24" style={{ background: '#0A1B4D' }}>
+        {/* ── Mission & Vision ── */}
+        <section className="py-24" style={{ background: '#0a1b4d' }}>
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="font-[Montserrat] text-[24px] font-semibold text-white mb-4">Our Vision for the Future</h2>
-              <p className="text-[18px] leading-[28px] max-w-2xl mx-auto" style={{ color: '#7684bc' }}>
-                To achieve global logistics leadership by integrating AI-driven routing with a carbon-neutral fleet.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
-              <div className="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: 'rgba(254,107,0,0.20)' }}>
-                  <Globe size={40} className="text-[#fe6b00]" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
+              
+              {/* Mission Card */}
+              <div className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-3xl flex flex-col md:flex-row gap-6 items-start hover:border-[#fe6b00]/50 transition-all duration-300">
+                <div className="w-14 h-14 bg-[#fe6b00] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Target size={30} className="text-white" />
                 </div>
-                <h3 className="font-[Montserrat] text-[24px] font-semibold text-[#0a1b4d] mb-4">Global Reach</h3>
-                <p className="text-[16px] text-[#45464f]">Connecting 220+ countries through a seamless network of air, sea, and land routes.</p>
+                <div>
+                  <h3 className="font-[Montserrat] text-[24px] font-bold text-white mb-4">Our Mission</h3>
+                  <p className="text-[15px] leading-relaxed text-[#9ab4fc]">
+                    To provide fast, secure, and cost-effective logistics solutions while maintaining the highest standards of reliability and customer satisfaction.
+                  </p>
+                </div>
               </div>
 
-              <div className="glass-card p-8 rounded-2xl flex flex-col items-center text-center border-t-4 border-[#fe6b00] scale-105">
-                <div className="w-16 h-16 bg-[#fe6b00] rounded-full flex items-center justify-center mb-6 shadow-lg">
-                  <Zap size={40} className="text-white" />
+              {/* Vision Card */}
+              <div className="bg-white/5 border border-white/10 p-8 md:p-10 rounded-3xl flex flex-col md:flex-row gap-6 items-start hover:border-[#fe6b00]/50 transition-all duration-300">
+                <div className="w-14 h-14 bg-[#fe6b00] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Eye size={30} className="text-white" />
                 </div>
-                <h3 className="font-[Montserrat] text-[24px] font-semibold text-[#0a1b4d] mb-4">Tech Innovation</h3>
-                <p className="text-[16px] text-[#45464f]">Utilizing real-time blockchain tracking and automated sorting for 100% transparency.</p>
+                <div>
+                  <h3 className="font-[Montserrat] text-[24px] font-bold text-white mb-4">Our Vision</h3>
+                  <p className="text-[15px] leading-relaxed text-[#9ab4fc]">
+                    To become a trusted and leading logistics company recognized for innovation, efficiency, and service excellence.
+                  </p>
+                </div>
               </div>
 
-              <div className="glass-card p-8 rounded-2xl flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ background: 'rgba(254,107,0,0.20)' }}>
-                  <CheckCircle size={40} className="text-[#fe6b00]" />
-                </div>
-                <h3 className="font-[Montserrat] text-[24px] font-semibold text-[#0a1b4d] mb-4">Sustainability</h3>
-                <p className="text-[16px] text-[#45464f]">Committed to reducing our carbon footprint through electric fleets and optimized routing.</p>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* ── Why Choose Cargonics ── */}
+        {/* ── Why Choose Cargosnic Logistics ── */}
         <section className="py-24 px-4 md:px-[48px] max-w-[1280px] mx-auto overflow-hidden">
           <div className="flex flex-col md:flex-row gap-16 items-center">
             <div className="w-full md:w-1/2">
@@ -188,22 +188,25 @@ export default function AboutUs() {
 
             <div className="w-full md:w-1/2 space-y-10">
               <div>
-                <h2 className="font-[Montserrat] text-[32px] md:text-[24px] font-semibold text-[#0a1b4d] mb-4">Why Choose Cargonics</h2>
-                <p className="text-[16px] text-[#45464f]">We don't just move boxes; we manage the promises you make to your customers.</p>
+                <h2 className="font-[Montserrat] text-[32px] md:text-[24px] font-semibold text-[#0a1b4d] mb-4">Why Choose Us</h2>
+                <p className="text-[16px] text-[#45464f]">At Cargosnic Logistics, we focus on trust, reliability, and custom-tailored operations to ensure your shipments are delivered perfectly.</p>
               </div>
-              <div className="space-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { Icon: ShieldCheck, title: 'Unmatched Security', desc: 'Military-grade protocols for cargo protection and high-value shipment handling.' },
-                  { Icon: Zap, title: 'Rapid Deployment', desc: 'Optimized air-hub connections ensuring the fastest possible transit times globally.' },
-                  { Icon: Headset, title: '24/7 Priority Support', desc: 'A dedicated team of logistics experts available around the clock for your peace of mind.' },
+                  { Icon: Truck, title: 'Reliable Cargo Transportation', desc: 'Secure and dependable movement of goods.' },
+                  { Icon: Zap, title: 'Timely Deliveries', desc: 'Optimized planning for prompt arrival schedules.' },
+                  { Icon: Headset, title: 'Professional Customer Support', desc: 'Logistics experts ready to guide you 24/7.' },
+                  { Icon: ShieldCheck, title: 'Safe & Secure Handling', desc: 'Rigorous safety protocols protecting your cargo.' },
+                  { Icon: Globe, title: 'Efficient Logistics Management', desc: 'Smart routing and coordination at every step.' },
+                  { Icon: CheckCircle, title: 'Customer-Centric Approach', desc: 'Solutions tailored specifically to your expectations.' }
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-6 group">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 group-hover:bg-[#fe6b00] group-hover:text-white" style={{ background: '#d3e4fe' }}>
-                      <item.Icon size={22} />
+                  <div key={item.title} className="flex gap-4 group items-start">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-[#fe6b00] group-hover:text-white" style={{ background: '#eff4ff', color: '#0a1b4d' }}>
+                      <item.Icon size={18} />
                     </div>
                     <div>
-                      <h4 className="font-[Montserrat] text-[24px] font-semibold text-[#000520] mb-1">{item.title}</h4>
-                      <p className="text-[16px] text-[#45464f]">{item.desc}</p>
+                      <h4 className="font-[Montserrat] text-[15px] font-bold text-[#000520] mb-1">{item.title}</h4>
+                      <p className="text-[13px] text-[#45464f] leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -269,7 +272,7 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-6 border-t text-center md:text-left" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>
-          <p className="text-[13px]" style={{ color: 'rgba(118,132,188,0.60)' }}>© 2024 Cargonics Express Services. GST: 03AANCC6927C1ZT. All Rights Reserved.</p>
+          <p className="text-[13px]" style={{ color: 'rgba(118,132,188,0.60)' }}>© 2026 Cargonics Express Services. GST: 03AANCC6927C1ZT. All Rights Reserved.</p>
         </div>
       </footer>
 
