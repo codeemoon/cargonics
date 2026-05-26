@@ -105,11 +105,11 @@ export default function TrackShipment() {
         </div>
       )}
 
-      <main className="pt-32 pb-20 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+      <main className="pt-24 pb-8 px-4 md:px-[48px] max-w-[1280px] mx-auto">
 
         {/* ── Hero Search Section ── */}
-        <section className="mb-12 text-center">
-          <h1 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold mb-6 text-[#0a1b4d]" style={{ letterSpacing: '-0.02em' }}>
+        <section className="mb-8 text-center">
+          <h1 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold mb-6 text-[#0a1b4d] pt-4" style={{ letterSpacing: '-0.02em' }}>
             Track Your Global Cargo
           </h1>
           <p className="text-[18px] leading-[28px] text-[#45464f] mb-10 max-w-2xl mx-auto">
@@ -147,7 +147,7 @@ export default function TrackShipment() {
               <div className="rounded-3xl p-6 md:p-10"
                 style={{ background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.30)', boxShadow: '0 20px 25px -5px rgba(0,0,0,0.05)' }}>
 
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-4">
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                   <div>
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-[13px] mb-3" style={{ background: '#6afe9c', color: '#00210c' }}>
                       <span className="w-2 h-2 rounded-full mr-2 animate-pulse" style={{ background: '#009b50' }}></span>
@@ -308,7 +308,7 @@ export default function TrackShipment() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

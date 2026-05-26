@@ -92,10 +92,10 @@ export default function ContactUs() {
         </div>
       )}
 
-      <main className="pt-24 pb-16">
+      <main className="pt-20 pb-10">
 
         {/* ── Hero Section ── */}
-        <section className="relative flex items-center overflow-hidden mb-16" style={{ height: '400px' }}>
+        <section className="relative flex items-center overflow-hidden mb-6" style={{ height: '320px' }}>
           <div className="absolute inset-0 z-0">
             <img className="w-full h-full object-cover" alt="Diverse team of logistics professionals in a modern glass office"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJkIipPuDCWjzElpZuXfIhz8vt79B9-F5VWxru4LHtg0l1I4gIwLhnZ-gXh1Kv0yw8UExliVQauqjg-juFxeDgbK_IoNh5H4YAc0OJVVc_SQ3jPG0eSIP-XAARu__gVq0lpDUUPJYl6D1Q9djvwki0MrK6t7Twzo9vcn5-ZJ3RI3nL3YcYIUEFpBif8PD67cy-s-aWXcmcl0gZgdACmkVs8mCGYFeDP8Ql41yjsFRdPvI1SqPxcRwfCIvXysO75jAItxkrxlU_FE" />
@@ -114,7 +114,7 @@ export default function ContactUs() {
         <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
 
           {/* ── Contact Cards Bento Grid ── */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px] mb-6">
             {[
               { Icon: Mail, title: 'Email Us', desc: 'Our support team typically responds within 2 business hours.', cta: <a className="text-[#000520] font-bold text-[18px] hover:underline transition-all" href="mailto:info@cargonics.com">info@cargonics.com</a> },
               { Icon: Phone, title: 'Call Center', desc: 'Mon-Sat, 9:00 AM to 7:00 PM IST for immediate assistance.', cta: <a className="text-[#000520] font-bold text-[18px] hover:underline transition-all" href="tel:+919599196008">+91 9599196008</a> },
@@ -132,7 +132,7 @@ export default function ContactUs() {
           </div>
 
           {/* ── Form & Map Section ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
 
             {/* ── Contact Form ── */}
             <div className="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
@@ -247,7 +247,7 @@ export default function ContactUs() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

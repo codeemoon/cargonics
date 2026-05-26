@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
@@ -8,6 +8,44 @@ import {
 export default function AboutUs() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+
+  // Scroll-reveal animation for image cards
+  const imgSectionRef = useRef(null)
+  useEffect(() => {
+    const style = document.createElement('style')
+    style.textContent = `
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(32px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeSlideLeft {
+        from { opacity: 0; transform: translateX(32px); }
+        to   { opacity: 1; transform: translateX(0); }
+      }
+      .img-card-anim { opacity: 0; }
+      .img-card-anim.visible-1 { animation: fadeSlideUp 0.7s ease forwards 0.1s; }
+      .img-card-anim.visible-2 { animation: fadeSlideUp 0.7s ease forwards 0.3s; }
+      .img-card-anim.visible-3 { animation: fadeSlideLeft 0.7s ease forwards 0.2s; }
+      .img-card-wrap { overflow: hidden; border-radius: 1rem; }
+      .img-card-wrap img { transition: transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.55s ease; }
+      .img-card-wrap:hover img { transform: scale(1.04); box-shadow: 0 20px 48px rgba(10,27,77,0.18); }
+    `
+    document.head.appendChild(style)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = entry.target.querySelectorAll('.img-card-anim')
+            cards.forEach((card, i) => card.classList.add(`visible-${i + 1}`))
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.15 }
+    )
+    if (imgSectionRef.current) observer.observe(imgSectionRef.current)
+    return () => { observer.disconnect(); document.head.removeChild(style) }
+  }, [])
 
   return (
     <div className="overflow-x-hidden" style={{ background: '#f8f9ff' }}>
@@ -77,7 +115,7 @@ export default function AboutUs() {
       <main className="pt-20">
 
         {/* ── Hero Section ── */}
-        <section className="relative flex items-center overflow-hidden" style={{ height: '500px' }}>
+        <section className="relative flex items-center overflow-hidden" style={{ height: '420px' }}>
           <div className="absolute inset-0 z-0">
             <img className="w-full h-full object-cover" alt="High-tech logistics warehouse at sunset"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu9qT-iRAIbIKLzx53H_Jfch9Drngtvq7w6QhKMKu-nJVXiCiFyxktmhhFC09OqzEYP0vQkjFP1GG6g8uR0CK5khVRp0vNQjTwi6AIzoxd_5ksvbut-bns9FdMK4eBVJbHOzvV3KarPC0pg7WbffKfoVOcEq9zgjhyQpU9i2EIZgPMquggZB7v9mTTTHMS3WjFeI7-B1PimEQZUk_6VxVLBZNx5LptIkiqZ1dyn2sNtSsW9juhXLh8t-WN06_o8SadKDLMv70G8AI" />
@@ -97,7 +135,7 @@ export default function AboutUs() {
         </section>
 
         {/* ── Company Story & Mission ── */}
-        <section className="py-24 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+        <section className="py-10 px-4 md:px-[48px] max-w-[1280px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-[32px] items-center">
             <div className="md:col-span-6 space-y-6">
               <h2 className="font-[Montserrat] text-[28px] font-semibold text-[#0a1b4d] border-l-4 border-[#fe6b00] pl-6 mb-2">Who We Are</h2>
@@ -111,26 +149,40 @@ export default function AboutUs() {
                 At Cargosnic Logistics, we believe logistics is more than moving goods — it is about connecting businesses, delivering commitments, and creating reliable supply chain solutions.
               </p>
             </div>
-            <div className="md:col-span-6 grid grid-cols-2 gap-4">
+            <div className="md:col-span-6 grid grid-cols-2 gap-4" ref={imgSectionRef}>
               <div className="space-y-4">
-                <img className="rounded-2xl shadow-xl w-full object-cover" style={{ height: '256px' }}
-                  alt="Large cargo vessel's bow cutting through deep blue ocean waters"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF5m1QH5UZR3dgLALefbn2AsEJW8qV62VNPGCbSVjFVIL6SBvXsDyY8M0XnxW83ooLDztpT-4ea430yAbz9qUiS_gCuLjl2mscP2B98gvJGHzw9um9fFnI2yBcoysYd8UVPJiJaaFF2rBnHXcD9ITJhMtQ7QVaXKrv4vdpuOyv7P4aT-No5mtLADcFJRenIAr85kMnhwBno_rdEzDcjln-qORVeqmZ_eEo7Pg-7lgKAMpjwAVH1JPlaxlTEyjifGAw5_lpUzvS_hI" />
-                <img className="rounded-2xl shadow-xl w-full object-cover" style={{ height: '320px' }}
-                  alt="Professional team of logistics experts in a high-tech control center"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbGQG--M8_Dat5YyQWCblvfEBudW8Do-D_FuDyeBwXGzhFvx76ALDo6-WlOiiYBzHonlHFppONMSZ7j_OS6m0tevwtqUfsbKHRKYGV7gASaXcLStPIv_PILhJrdhkGwi_2gUdaWqpK8trmLa4bUAiEX7hdjmhxjOpsi0DqslB7_WtaNRnvs8ch66BJZYzJpnqwGgnFvFwXmSJ_cL72NJqYhKCmAK6Z9KoLVR5tZNSyhwdlSHvrGHyJT1L3HUkhVIaPnBfuIHgqJgQ" />
+
+                {/* Card 1 — fade slide up */}
+                <div className="img-card-anim img-card-wrap shadow-xl" style={{ height: '256px' }}>
+                  <img className="w-full h-full object-cover" style={{ height: '256px' }}
+                    alt="Large cargo vessel's bow cutting through deep blue ocean waters"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF5m1QH5UZR3dgLALefbn2AsEJW8qV62VNPGCbSVjFVIL6SBvXsDyY8M0XnxW83ooLDztpT-4ea430yAbz9qUiS_gCuLjl2mscP2B98gvJGHzw9um9fFnI2yBcoysYd8UVPJiJaaFF2rBnHXcD9ITJhMtQ7QVaXKrv4vdpuOyv7P4aT-No5mtLADcFJRenIAr85kMnhwBno_rdEzDcjln-qORVeqmZ_eEo7Pg-7lgKAMpjwAVH1JPlaxlTEyjifGAw5_lpUzvS_hI" />
+                </div>
+
+                {/* Card 2 — fade slide up (delayed) */}
+                <div className="img-card-anim img-card-wrap shadow-xl" style={{ height: '320px' }}>
+                  <img className="w-full h-full object-cover" style={{ height: '320px' }}
+                    alt="Professional team of logistics experts in a high-tech control center"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbGQG--M8_Dat5YyQWCblvfEBudW8Do-D_FuDyeBwXGzhFvx76ALDo6-WlOiiYBzHonlHFppONMSZ7j_OS6m0tevwtqUfsbKHRKYGV7gASaXcLStPIv_PILhJrdhkGwi_2gUdaWqpK8trmLa4bUAiEX7hdjmhxjOpsi0DqslB7_WtaNRnvs8ch66BJZYzJpnqwGgnFvFwXmSJ_cL72NJqYhKCmAK6Z9KoLVR5tZNSyhwdlSHvrGHyJT1L3HUkhVIaPnBfuIHgqJgQ" />
+                </div>
+
               </div>
-              <div className="pt-12 space-y-4">
-                <img className="rounded-2xl shadow-xl w-full object-cover" style={{ height: '450px' }}
-                  alt="High-speed motion blur photography of a delivery truck on a modern highway at dawn"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwrB3ssF-ifmDnB-PP2szApwCPFRaj0ngef6mCO0i0jCD8YmaEOAS2ZzA2hod86pYIE0SkYijN-aSfuFQVkcd-s-Ib7Jz6ImeIII62vFCruXUdRbrqlcyvHCyrDhQLJPkhdp20zflXHHgh5JQv2Gqz8gDA_9w7F5MbJzUG0JcrbovbPP7fyJ9CNbCuhmVeAk-XWoBqMNYdEKs1x4X-jFqgfrFFLgT_QOITJP08DQLyUiCl17GmYiAEzDDUoUWNLVZgzj35IrmkAJY" />
+              <div className="pt-6 space-y-4">
+
+                {/* Card 3 — fade slide from right */}
+                <div className="img-card-anim img-card-wrap shadow-xl" style={{ height: '450px' }}>
+                  <img className="w-full h-full object-cover" style={{ height: '450px' }}
+                    alt="High-speed motion blur photography of a delivery truck on a modern highway at dawn"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwrB3ssF-ifmDnB-PP2szApwCPFRaj0ngef6mCO0i0jCD8YmaEOAS2ZzA2hod86pYIE0SkYijN-aSfuFQVkcd-s-Ib7Jz6ImeIII62vFCruXUdRbrqlcyvHCyrDhQLJPkhdp20zflXHHgh5JQv2Gqz8gDA_9w7F5MbJzUG0JcrbovbPP7fyJ9CNbCuhmVeAk-XWoBqMNYdEKs1x4X-jFqgfrFFLgT_QOITJP08DQLyUiCl17GmYiAEzDDUoUWNLVZgzj35IrmkAJY" />
+                </div>
+
               </div>
             </div>
           </div>
         </section>
 
         {/* ── Mission & Vision ── */}
-        <section className="py-24" style={{ background: '#0a1b4d' }}>
+        <section className="py-10" style={{ background: '#0a1b4d' }}>
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-[32px]">
               
@@ -165,8 +217,8 @@ export default function AboutUs() {
         </section>
 
         {/* ── Why Choose Cargosnic Logistics ── */}
-        <section className="py-24 px-4 md:px-[48px] max-w-[1280px] mx-auto overflow-hidden">
-          <div className="flex flex-col md:flex-row gap-16 items-center">
+        <section className="py-10 px-4 md:px-[48px] max-w-[1280px] mx-auto overflow-hidden">
+          <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="w-full md:w-1/2">
               <div className="relative">
                 <div className="absolute -top-10 -left-10 w-40 h-40 rounded-full" style={{ background: 'rgba(254,107,0,0.10)', filter: 'blur(48px)' }}></div>
@@ -216,7 +268,7 @@ export default function AboutUs() {
         </section>
 
         {/* ── Final CTA ── */}
-        <section className="py-20 px-4 md:px-[48px] max-w-[1280px] mx-auto text-center">
+        <section className="py-8 px-4 md:px-[48px] max-w-[1280px] mx-auto text-center">
           <div className="rounded-[2rem] p-12 md:p-20 relative overflow-hidden shadow-2xl" style={{ background: '#0a1b4d' }}>
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full -mr-32 -mt-32" style={{ background: '#fe6b00', opacity: 0.10 }}></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full -ml-24 -mb-24" style={{ background: '#fff', opacity: 0.05 }}></div>
@@ -236,7 +288,7 @@ export default function AboutUs() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

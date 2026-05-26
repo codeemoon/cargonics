@@ -108,10 +108,10 @@ export default function FAQs() {
       )}
 
       {/* ── Main Content Area ── */}
-      <main className="pt-24 flex-grow pb-20">
+      <main className="pt-20 flex-grow pb-12">
 
         {/* ── Hero Section & Search ── */}
-        <section className="relative py-20 px-4 md:px-[48px] overflow-hidden">
+        <section className="relative py-8 px-4 md:px-[48px] overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img className="w-full h-full object-cover opacity-10" alt="A cinematic wide shot of a modern logistics distribution center"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuASCj0_nEnK5i68bPEHMJKhpOmiKrEv_TG3sJGIt6NjKWXwE-B-5YyLezFy2AhGCRCOh502xsZHLolfvsuTl-10QvlyEkeI0_Iqqyy2fd7F86py5qXqY26d32oK_xlwKji6e9wFMEGoTNqYrav77Zqkikb-_s_9ntSgTBwGOLc7l67bUWAEUn1oIlVXrNR31pjAC6-Z0cr6TSLw8cO4ekjRgMRhxOQ8D6Vmc_KsB5D93QkbAj7D6pZc37SZ4aLuuYDPgjazDn37As4" />
@@ -139,7 +139,7 @@ export default function FAQs() {
 
         {/* ── Category Grid & Accordions ── */}
         <section className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-6">
-          <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex flex-col lg:flex-row gap-8">
 
             {/* Sidebar Categories (Desktop) */}
             <aside className="w-full lg:w-64 shrink-0">
@@ -177,7 +177,7 @@ export default function FAQs() {
             {/* Accordion Content */}
             <div className="flex-grow space-y-10">
               {activeCategories.length === 0 ? (
-                <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-[#c6c5d0] p-8">
+                <div className="text-center py-10 bg-white rounded-2xl border border-dashed border-[#c6c5d0] p-8">
                   <SearchX size={48} className="text-[#767680] mx-auto mb-4" />
                   <h3 className="font-[Montserrat] text-[20px] font-semibold text-[#000520] mb-2">No matching questions found</h3>
                   <p className="text-[#45464f] max-w-md mx-auto">
@@ -229,7 +229,7 @@ export default function FAQs() {
         </section>
 
         {/* ── CTA Section ── */}
-        <section className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-16">
+        <section className="max-w-[1280px] mx-auto px-4 md:px-[48px] py-10">
           <div className="rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #0A1B4D 0%, #162E74 100%)' }}>
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#fe6b00]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -252,7 +252,7 @@ export default function FAQs() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

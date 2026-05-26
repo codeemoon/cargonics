@@ -126,7 +126,7 @@ export default function Home() {
       )}
 
 {/* ── Hero Section ── */}
-       <section className="relative flex items-center pt-12 overflow-hidden" style={{ height: '650px' }}>
+      <section className="relative flex items-center pt-12 overflow-hidden" style={{ height: '560px' }}>
          <div className="absolute inset-0 z-0">
            <img
              className="w-full h-full object-cover"
@@ -164,10 +164,13 @@ export default function Home() {
          </div>
        </section>
 
+      {/* ── White Transition Bar ── */}
+      <div className="h-24" style={{ background: 'linear-gradient(to bottom, #f8f9ff 0%, #ffffff 100%)' }}></div>
+
       {/* ── Tracking Preview Bento ── */}
-<section className="py-20 px-4 md:px-[48px] max-w-[1280px] mx-auto -mt-20 relative z-20">
+      <section className="px-4 md:px-[48px] max-w-[1280px] mx-auto -mt-8 relative z-20 pb-8">
          <div className="glass-card rounded-[2rem] p-8 md:p-12 shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-1">
               <h2 className="font-[Montserrat] text-[24px] font-semibold text-[#000520] mb-2">Live Tracking</h2>
               <p className="text-[16px] text-[#45464f]">Real-time visibility into your global supply chain, powered by Cargonics GPS.</p>
@@ -196,8 +199,8 @@ export default function Home() {
       </section>
 
       {/* ── Services Section (Bento Grid) ── */}
-<section className="py-20 px-4 md:px-[48px] max-w-[1280px] mx-auto">
-         <div className="text-center mb-12">
+      <section className="py-8 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+        <div className="text-center mb-8">
           <span className="text-[#fe6b00] font-bold tracking-[0.2em] text-[13px] uppercase" style={{ fontFamily: 'Inter' }}>Our Expertise</span>
           <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold text-[#000520] mt-4">Precision Logistics</h2>
         </div>
@@ -258,9 +261,9 @@ export default function Home() {
       </section>
 
       {/* ── Why Choose Us ── */}
-      <section className="py-20 overflow-hidden relative" style={{ background: '#000520', color: '#fff' }}>
+      <section className="py-8 overflow-hidden relative" style={{ background: '#000520', color: '#fff' }}>
         <div className="absolute top-0 right-0 w-1/3 h-full rounded-full" style={{ background: 'rgba(254,107,0,0.10)', filter: 'blur(120px)' }}></div>
-        <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <span className="text-[#fe6b00] font-bold tracking-[0.2em] text-[13px] uppercase">Advantages</span>
             <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold mt-4 mb-8 leading-tight">The Cargonics Competitive Edge</h2>
@@ -301,8 +304,8 @@ export default function Home() {
       </section>
 
       {/* ── Global Network Map ── */}
-      <section className="py-20" style={{ background: '#f8f9ff' }}>
-        <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto text-center mb-16">
+      <section className="py-8" style={{ background: '#f8f9ff' }}>
+        <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto text-center mb-10">
           <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold text-[#000520]">Pan India &amp; Global Presence</h2>
           <p className="text-[16px] text-[#45464f] mt-4 max-w-3xl mx-auto">
             Our comprehensive logistics network spans across the entire Indian sub-continent, covering 20,000+ pin codes with localized express hubs, while simultaneously maintaining a robust global shipping corridor connecting businesses to over 220 countries and territories.
@@ -337,9 +340,9 @@ export default function Home() {
       </section>
 
       {/* ── Testimonials ── */}
-      <section className="py-20" style={{ background: '#eff4ff' }}>
+      <section className="py-8" style={{ background: '#eff4ff' }}>
         <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
-          <div className="flex justify-between items-end mb-12">
+          <div className="flex justify-between items-end mb-8">
             <div>
               <span className="text-[#fe6b00] font-bold tracking-[0.2em] text-[13px] uppercase">Success Stories</span>
               <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold text-[#000520] mt-4">Trusted by Industry Leaders</h2>
@@ -376,7 +379,7 @@ export default function Home() {
       </section>
 
       {/* ── FAQ Preview ── */}
-<section className="py-20 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+      <section className="py-8 px-4 md:px-[48px] max-w-[1280px] mx-auto">
          <div className="max-w-3xl mx-auto">
            <h2 className="font-[Montserrat] text-[24px] md:text-[48px] font-bold text-[#000520] mb-10 text-center">Frequently Asked Questions</h2>
           <div className="space-y-4">
@@ -406,7 +409,7 @@ export default function Home() {
       </section>
 
       {/* ── Final CTA Banner ── */}
-<section className="py-20 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+      <section className="py-8 px-4 md:px-[48px] max-w-[1280px] mx-auto">
          <div className="rounded-[3rem] p-10 md:p-16 text-center relative overflow-hidden" style={{ background: '#0A1B4D' }}>
            <div className="absolute inset-0 opacity-10 pointer-events-none">
             <svg height="100%" preserveAspectRatio="none" viewBox="0 0 100 100" width="100%">
@@ -430,7 +433,7 @@ export default function Home() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

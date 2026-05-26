@@ -148,11 +148,11 @@ export default function OurServices() {
         </div>
       )}
 
-      <main className="pt-24 pb-16">
+      <main className="pt-20 pb-10">
 
         {/* ── Hero / Intro Section ── */}
-        <section className="px-4 md:px-[48px] py-12 md:py-24 max-w-[1280px] mx-auto">
-          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
+        <section className="px-4 md:px-[48px] py-8 md:py-10 max-w-[1280px] mx-auto">
+          <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#a04100] font-bold tracking-widest uppercase text-[13px] mb-4">Our Expertise</span>
             <h1 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-[#000520] mb-6" style={{ letterSpacing: '-0.02em' }}>
               Precision Logistics for a <span className="text-[#fe6b00]">Connected World</span>
@@ -163,7 +163,7 @@ export default function OurServices() {
           </div>
 
           {/* ── Zigzag List of Services ── */}
-          <div className="space-y-20 max-w-[1100px] mx-auto">
+          <div className="space-y-10 max-w-[1100px] mx-auto">
             {SERVICES.map((service, index) => {
               const isEven = index % 2 === 0
               const isDark = service.bg.startsWith('linear')
@@ -218,7 +218,7 @@ export default function OurServices() {
         </section>
 
         {/* ── CTA Section ── */}
-        <section className="mt-16 px-4 md:px-[48px] max-w-[1280px] mx-auto">
+        <section className="mt-10 px-4 md:px-[48px] max-w-[1280px] mx-auto">
           <div className="rounded-3xl p-12 md:p-20 text-center relative overflow-hidden"
             style={{ background: 'linear-gradient(135deg, #0A1B4D 0%, #162E74 100%)' }}>
             <div className="relative z-10">
@@ -245,7 +245,7 @@ export default function OurServices() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

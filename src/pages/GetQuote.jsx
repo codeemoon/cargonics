@@ -73,7 +73,7 @@ export default function GetQuote() {
       )}
 
       {/* ── Main Content Area ── */}
-      <main className="flex-1 pt-32 pb-20 px-4 md:px-[48px] max-w-[1280px] w-full mx-auto flex flex-col justify-center items-center">
+      <main className="flex-1 pt-10 pb-8 px-4 md:px-[48px] max-w-[1280px] w-full mx-auto flex flex-col justify-center items-center">
 
         {/* Animated Background decorative blobs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-20 pointer-events-none filter blur-[120px]" style={{ background: '#fe6b00' }}></div>
@@ -127,7 +127,7 @@ export default function GetQuote() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />

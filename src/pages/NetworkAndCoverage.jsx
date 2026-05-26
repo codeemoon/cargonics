@@ -86,7 +86,7 @@ export default function NetworkAndCoverage() {
       <main className="pt-20">
 
 {/* ── Hero: Global Reach ── */}
-       <section className="relative flex items-center overflow-hidden" style={{ height: '500px' }}>
+        <section className="relative flex items-center overflow-hidden" style={{ height: '420px' }}>
          <div className="absolute inset-0 z-0">
            <img className="w-full h-full object-cover" alt="Massive cargo ship crossing the deep blue ocean during a golden hour sunset"
              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4iO5qKHgzCNBFBRdBmYTPBYuUjYr74_-y-sK1mk6cMgS7hZRbFjtzLv71M_BbkHK82nFiy9HLRaV3FYEzEDnAWI82tI3z2K7sCKxmCiYT-JwpTV_e7SVYagu4hWiuzhHnyoaSeUCVVV42yE5wzlbvbIA5Weq4NubRKMTyPHvqkOf-Be28ezjEfwGmNVf-ys5dDwxnH0uwUzCL0smbhnwkFBMQYHzT8wWpcmavfXkjPapbIaY2PGwzdUZNvtBuVNbJW35VIOEh28Y" />
@@ -110,7 +110,7 @@ export default function NetworkAndCoverage() {
        </section>
 
         {/* ── Domestic Network: India Interactive ── */}
-        <section className="py-24" style={{ background: '#f8f9ff' }}>
+        <section className="py-10" style={{ background: '#f8f9ff' }}>
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-[24px] items-center">
 
@@ -183,9 +183,9 @@ export default function NetworkAndCoverage() {
         </section>
 
         {/* ── Global Routes Bento Grid ── */}
-        <section className="py-24" style={{ background: '#eff4ff' }}>
+        <section className="py-10" style={{ background: '#eff4ff' }}>
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10">
               <h2 className="font-[Montserrat] text-[32px] md:text-[48px] font-bold text-[#0a1b4d] mb-4" style={{ letterSpacing: '-0.02em' }}>International Arteries</h2>
               <p className="max-w-2xl mx-auto text-[#45464f] text-[18px] leading-[28px]">
                 We bridge continents with scheduled freighter services and strategic partnerships with global air and sea carriers.
@@ -244,9 +244,9 @@ export default function NetworkAndCoverage() {
         </section>
 
         {/* ── Logistic Infrastructure ── */}
-        <section className="py-24 bg-white">
+        <section className="py-10 bg-white">
           <div className="px-4 md:px-[48px] max-w-[1280px] mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-8">
               <div className="max-w-xl">
                 <h2 className="font-[Montserrat] text-[32px] md:text-[24px] font-semibold text-[#0a1b4d] mb-4">Hard Assets, Soft Touch</h2>
                 <p className="text-[#45464f] text-[18px] leading-[28px]">
@@ -290,7 +290,7 @@ export default function NetworkAndCoverage() {
         </section>
 
         {/* ── CTA Section ── */}
-        <section className="py-24 relative overflow-hidden" style={{ background: '#0A1B4D' }}>
+        <section className="py-10 relative overflow-hidden" style={{ background: '#0A1B4D' }}>
           <div className="absolute top-0 left-0 w-full h-full" style={{ opacity: 0.10 }}>
             <div className="absolute w-[800px] h-[800px] rounded-full -top-96 -left-96" style={{ background: '#fe6b00', filter: 'blur(150px)' }}></div>
             <div className="absolute w-[600px] h-[600px] rounded-full -bottom-96 -right-96" style={{ background: '#3b82f6', filter: 'blur(150px)' }}></div>
@@ -316,7 +316,7 @@ export default function NetworkAndCoverage() {
 
       {/* ── Footer ── */}
       <footer className="w-full text-white mt-auto border-t" style={{ background: '#0a1b4d', borderColor: 'rgba(255,255,255,0.10)' }}>
-        <div className="w-full py-12 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-10 md:gap-8 max-w-[1280px] mx-auto">
+        <div className="w-full py-8 px-4 md:px-[48px] flex flex-col md:flex-row justify-between gap-6 md:gap-8 max-w-[1280px] mx-auto">
           <div className="space-y-4 md:max-w-[320px]">
             <div className="flex items-center h-16 overflow-hidden mb-4">
               <img src="/logo/new logo.png" alt="Cargonics Express" className="h-36 w-auto object-contain -my-10" />
