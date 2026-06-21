@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-hot-toast'
 import {
   Menu, X, Home as HomeIcon, Info, Truck, MapPin, Globe, Headphones,
@@ -11,11 +11,17 @@ export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [trackingNumber, setTrackingNumber] = useState('')
   const [openFaq, setOpenFaq] = useState(0)
+  const navigate = useNavigate()
 
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
 
   const handleTrack = () => {
-    toast.error('not working, Work on progress')
+    const awb = trackingNumber.trim()
+    if (!awb) {
+      toast.error('Please enter a tracking number.')
+      return
+    }
+    navigate('/track-shipment', { state: { trackingNumber: awb } })
   }
 
   const faqs = [
